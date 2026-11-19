@@ -1,6 +1,15 @@
 name: 05-2-Event filters and activity types
 on:
   pull_request:
-    types: [closed, synchronize]
-    branches:
-      - main
+      types: [closed]
+      branches:
+        - main
+        
+
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Running whenever a  PR is closed  
+        run: echo "Running when a pull request is closed on the main branch"
