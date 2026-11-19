@@ -1,7 +1,7 @@
 name: 05-1-filters-activity-types
 on:
   pull_request:
-      types: [opened, synchronize]
+      types: [closed]
       branches:
         - main
         
@@ -11,5 +11,5 @@ jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        run: echo "Running when a pull request is opened or synchronized on the main branch"
+      - name: Running whenever a  PR is closed  
+        run: echo "Running when a pull request is closed on the main branch"
